@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="value" id="">
+    <span id="vnd" style="margin-top: 10px;display: block;"></span>
+    <script src="./index.js"></script>
+    <script>
+        const elemIput = document.querySelector("input[name='value']")
+        if(elemIput) {
+            elemIput.addEventListener('input', (e) => {
+                const value = e.target.value
+                const text = value ? convertNumerToVND(value) : ""
+                const elemSpan = document.getElementById('vnd')
+                elemSpan.innerText = text
+            })
+        }
+    </script>
+</body>
+</html>
